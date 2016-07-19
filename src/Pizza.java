@@ -1,40 +1,74 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class Pizza {
 
+	//String ingredient;
+	int qtdeingrediente;
+	static int qtdetotal;
+	Map<String,Integer> ingrediente = new HashMap<String, Integer>();
+	//int valuni;
 	
 	
 	
-	public Pizza(){
+	
+	
+	
+	
+
+
+
+
+	
+
+
+
+
+
+
+	public String adicionaingrediente(Map<String,Integer> ing){
 		
 		
-		
+		ingrediente = ing;
+		qtdeingrediente = ing.size();
+		contabilizaIng(qtdeingrediente);
+		System.out.println(getPreco()+"preco");
+		System.out.println();
+		return "";
 	}
 	
+
 	
 	
-	public String  adicionaingrediente(String ingrediente){
+	public int getPreco(){
 		
-		
-		return "a";
-	}
-	
-	
-	public void getPreco(){
 		
 		if(qtdeingrediente <= 2){
-			valuni += 15;
+			return 15;
 		} else
 			 if(qtdeingrediente > 2 && qtdeingrediente <= 5){
-				valuni += 20;
+			return 20;
 		}else{
-			valuni += 23;
+			return 23;
 		}
 		
 				
 	}
 	
 	
-	public static contabilizaIngrediente() 
+	
+	
+	public int contabilizaIng(int cont) {
+		
+		qtdetotal += cont;
+		return qtdetotal;
+		
+	}
+
+
+
+
+	
 	
 	
 	
