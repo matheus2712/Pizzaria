@@ -1,49 +1,36 @@
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
-		  import java.util.Map;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 		  
 		  
 public class Principal {
 
 	public static void main(String[] args) {
 		
-						
-						
-						
-						
-						Map<String,Integer> ingrediente = new HashMap<String, Integer>();
-						
-						
-						Pizza p1 = new Pizza();
-		               
-		                /*
-		                * Vamos adicionar alguns valores a nossa lista
-		                * */
-		               ingrediente.put( "Mussarela", new Integer(1));
-		               ingrediente.put( "Mussarela", new Integer(1));
-		               p1.adicionaingrediente(ingrediente);
-		               Pizza p2 = new Pizza();
-		               ingrediente.put( "Mussarela", new Integer(1));
-		               ingrediente.put( "Calabresa", new Integer (1));
-		               ingrediente.put( "Frango", new Integer (1));
-		               p2.adicionaingrediente(ingrediente);
-		               System.out.println();
-		               
-		               System.out.println(ingrediente); 
-		               
-		               /*
-		                * 
-		                *String keyToSearch = "K1";        
-		               
-		               
-		               if ( example.containsKey( keyToSearch ) ) {
-		                System.out.println("Valor da Chave "+keyToSearch+
-		                 " = "+example.get(keyToSearch));             
-		               }else{
-		                      System.err.println("Chave não existe");
-		                      }
-		              */
-		               	 
-		 
+				        Pizza p1 = new Pizza();
+				        CarrinhoDeCompras c = new CarrinhoDeCompras();
+				        
+				        p1.addIng("Milho");
+				        p1.addIng("Mussarela");
+				        p1.addIng("Calabresa");
+				        
+				        c.addpizza(p1);
+				        
+				        Pizza p2 = new Pizza();
+				        p2.addIng("Palmito");
+				        p2.addIng("Mussarela");
+				        c.addpizza(p2);
+				        
+				        Pizza p3 = new Pizza();
+				        p3.addIng("Lombo");
+				        c.addpizza(p3);
+				        
+				        p2.contabilizaIng();
+				        
 	}
 
 }
