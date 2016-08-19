@@ -9,7 +9,7 @@ import javax.xml.namespace.QName;
 public class Pizza {
 
 	
-	int qtdeingrediente;
+	 int qtdeingrediente;
 	
 	static Map<String, Integer> contagem = new HashMap<String, Integer>();
 		
