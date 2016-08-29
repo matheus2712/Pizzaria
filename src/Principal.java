@@ -26,7 +26,12 @@ public class Principal {
 				        c.addpizza(p2);
 				        
 				        Pizza p3 = new Pizza();
+				        p3.addIng("Palmito");
+				        p3.addIng("Tomate");
 				        p3.addIng("Lombo");
+				        p3.addIng("Milho");
+				        p3.addIng("Mussarela");
+				        p3.addIng("Calabresa");
 				        c.addpizza(p3);
 				        
 				        p2.contabilizaIng();

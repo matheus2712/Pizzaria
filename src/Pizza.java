@@ -9,12 +9,21 @@ import javax.xml.namespace.QName;
 public class Pizza {
 
 	
-	 int qtdeingrediente;
+	static int qtdeingrediente;
+	 static int qtdeing;
 	
 	static Map<String, Integer> contagem = new HashMap<String, Integer>();
 		
 	static List<String> aux = new ArrayList<String>();
 		
+	
+	
+public static void zerarIngredientes(){
+		
+		contagem.clear();
+		aux.clear();
+		qtdeingrediente = 0;
+		}
 	
 	
 	public void addIng(String c){
@@ -26,9 +35,13 @@ public class Pizza {
 	
 	
 	
+	
+
+
+
 	public int getPreco(){		
 		
-		if(qtdeingrediente <= 2){
+		if(qtdeingrediente > 0 && qtdeingrediente <= 2){
 			return 15;
 		} else
 			 if(qtdeingrediente > 2 && qtdeingrediente <= 5){
@@ -48,7 +61,7 @@ public class Pizza {
 		       contagem.put(valor, 0);
 		   }
 		   contagem.put(valor, contagem.get(valor)+1);
-		   Integer value = contagem.get(valor);
+		   //Integer value = contagem.get(valor);
 		   
 		   }
 		
@@ -59,4 +72,11 @@ public class Pizza {
 		}
 		
 	}
+	
+	
+	
+	
+	
+	
+	
 }
